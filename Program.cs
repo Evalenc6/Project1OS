@@ -5,8 +5,10 @@ class Program{
         //For Phase 1 Part 1
         //Phase1Part1();
 
-        //For Phase 2 Part 2
-        Phase1Part2();
+        //For Phase 1 Part 2
+        //Phase1Part2();
+
+        //For Phase 1 Part 3
         
     }
     static void Phase1Part1(){
