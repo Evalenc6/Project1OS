@@ -1,0 +1,14 @@
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/OSProject1.GeneratedMSBuildEditorConfig.editorconfig
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/OSProject1.AssemblyInfoInputs.cache
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/OSProject1.AssemblyInfo.cs
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/OSProject1.csproj.CoreCompileInputs.cache
+/home/evanv/Downloads/OSProject1/OSProject1/bin/Debug/net8.0/OSProject1
+/home/evanv/Downloads/OSProject1/OSProject1/bin/Debug/net8.0/OSProject1.deps.json
+/home/evanv/Downloads/OSProject1/OSProject1/bin/Debug/net8.0/OSProject1.runtimeconfig.json
+/home/evanv/Downloads/OSProject1/OSProject1/bin/Debug/net8.0/OSProject1.dll
+/home/evanv/Downloads/OSProject1/OSProject1/bin/Debug/net8.0/OSProject1.pdb
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/OSProject1.dll
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/refint/OSProject1.dll
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/OSProject1.pdb
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/OSProject1.genruntimeconfig.cache
+/home/evanv/Downloads/OSProject1/OSProject1/obj/Debug/net8.0/ref/OSProject1.dll
