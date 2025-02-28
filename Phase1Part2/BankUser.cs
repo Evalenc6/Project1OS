@@ -8,16 +8,16 @@ class BankUser{
     private BankAccount account;
     public BankUser(){
         id = userIDCounter++;
-        account = new BankAccount();
+        account = BankAccount.GetInstance();
     }
     public void Deposit(float amount){
-        Console.WriteLine($"User ${id} depositing ${amount}...");
-        BankAccount.AddToBalance(amount);
+        Console.WriteLine($"User {id} depositing ${amount}...");
+        account.AddToBalance(amount);
     }
 
     public void Withdraw(float amount){
-        Console.WriteLine($"User ${id} withdrawing ${amount}...");
-        BankAccount.RemoveToBalance(amount);
+        Console.WriteLine($"User {id} withdrawing ${amount}...");
+        account.RemoveToBalance(amount);
     }
 
 }
