@@ -2,15 +2,12 @@ using System;
 using System.Threading;
 class BasicThread{
     
-    protected List<Thread> ThreadList = [];
-    static void Main(){
-
-    }
-    
+    protected List<Thread> ThreadList = new List<Thread>();
+ 
     public void CreateThreads(int numOfThreads){
         for(int i = 0; i<numOfThreads; i++){
-            ThreadList.Add(new Thread(new ThreadStart(startBuyStuff)));
-            Console.Write("Added Thread" + i +  ": " +ThreadList[i]);
+            ThreadList.Add(new Thread(new ThreadStart(StartBuyStuff)));
+            Console.WriteLine("Added Thread" + i +  ": " +ThreadList[i].ManagedThreadId);
         }
 
         return;
@@ -18,14 +15,17 @@ class BasicThread{
 
     public void StartThreads(){
         foreach(Thread t in ThreadList){
-            Console.Write("I am getting 60 dollars from the bank");
+            Console.WriteLine(t.ManagedThreadId + " getting 50 dollars from the bank");
+            t.Start();
+            Console.WriteLine(t.ManagedThreadId + " am done getting 50 dollars from the bank");
+
         }
     }
     public void StartBuyStuff(){
         BuyStuff(50);
     }
-    public int BuyStuff(int cost){
-        Console.Write("Taking " + cost + " out to get some of my stuff done ");
+    private int BuyStuff(int cost){
+        Console.WriteLine("Taking " + cost + " out to get some of my stuff done ");
         return cost;
     }
     
