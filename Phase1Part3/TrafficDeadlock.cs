@@ -4,31 +4,32 @@ using System;
 
 class TrafficDeadlock{
 
-    public bool roadlock1;
+    private static readonly object roadlock1 = new object();
+    private static readonly object roadlock2 = new object();
 
-    public bool roadlock2;
 
-    public TrafficDeadlock(){
-        roadlock1 = false;
-        roadlock2 = false;
+    public void CarA(){
+        lock(roadlock1){
+            Console.WriteLine("Car A has entered road 1 and moving towards road 2");
+            Thread.Sleep(100);
+
+            lock(roadlock2){
+                Console.WriteLine("Car A has locked Road 2 and passed");
+            }
+        }
     }
 
-
-    public void goToRoad2(){
-        while(roadlock2 == true){
-            Console.WriteLine("Road 2 blocked can't move");
+    public void CarB(){
+        lock(roadlock2){
+            Console.WriteLine("Car B has entered road 2 and moving towards road 1");
             Thread.Sleep(100);
+            lock(roadlock1){
+                Console.WriteLine("Car B has locked Road 1 and passed");
+            }
+
         }
-        roadlock2 = true;
     }
     
-    public void goToRoad1(){
-        while(roadlock1 == true){
-            Console.WriteLine("Road 1 blocked can't move");
-            Thread.Sleep(100);
-        }
-        roadlock1 = true;
-    }
     
 }
 
