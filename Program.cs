@@ -1,6 +1,8 @@
-﻿using Phase1Part1;
+﻿
+using Phase1Part1;
 using Phase1Part2;
 using Phase1Part3;
+using Phase2Part1;
 class Program{
     static void Main(){
         //For Phase 1 Part 1
@@ -13,7 +15,11 @@ class Program{
         //Phase1Part3();
         
         //For Phase 1 Part 4 Deadlock
-        Phase1Part4();
+        //Phase1Part4();
+
+        //For Phase 2 Part 1
+        Phase2Part1();
+
     }
     static void Phase1Part1(){
         BasicThread BT = new BasicThread();
@@ -55,5 +61,28 @@ class Program{
 
         Console.WriteLine("Traffic sim complete");
 
+    }
+
+    static void Phase2Part1(){
+        Console.Write("Run as (1) Server or (2) Client? ");
+        string choice = Console.ReadLine();
+
+        if(choice =="1"){
+            PipeServer.Main();
+        }else if(choice =="2"){
+            PipeClient.Main();
+        }
+    }
+
+    static void Phase2Part2(){
+        return;
+    }
+
+    static void Phase2Part3(){
+        return;
+    }
+
+    static void Phase2Part4(){
+        return;
     }
 }
